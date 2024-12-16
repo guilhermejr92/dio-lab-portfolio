@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Guilherme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Guilherme</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h2>👋 Bem-vindo ao Meu Portfólio!</h2>
+            <p>Sou <strong>Guilherme</strong>, um <strong>Desenvolvedor Back-End</strong> apaixonado por transformar
+                ideias em soluções tecnológicas de alto impacto. Minha missão é criar sistemas eficientes e escaláveis,
+                sempre buscando inovação e excelência em cada projeto.</p>
+            <a href="#contato" class="btn">💬 Entre em Contato</a>
+        </div>
+        <div class="home-image">
+            <img src="assets/images/projects/dev.jpg" alt="Imagem de um desenvolvedor trabalhando">
+        </div>
+    </section>
+
+
+    <section id="sobre">
+        <h2>👨‍💻 Quem Sou Eu</h2>
+        <div class="sobre-container">
+            <div class="texto">
+                <p>Olá, sou <strong>Guilherme</strong>, um desenvolvedor <strong>Back-End</strong> apaixonado por criar
+                    <strong>soluções eficientes</strong>, <strong>escaláveis</strong> e <strong>seguras</strong> para
+                    aplicações web.
+                    Minha missão é transformar ideias em sistemas robustos, sempre alinhando as melhores práticas de
+                    desenvolvimento
+                    com tecnologias modernas. Possuo experiência em diversas linguagens de programação, bancos de dados
+                    e frameworks,
+                    garantindo entregas de alta qualidade que proporcionam uma experiência incrível aos usuários.
+                </p>
+                <p>Além disso, trabalho com <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, e
+                    utilizo
+                    ferramentas de design como <strong>Figma</strong> para criar interfaces funcionais e visualmente
+                    atraentes.</p>
+            </div>
+            <div class="habilidades">
+                <h3>Minhas Especialidades:</h3>
+                <ul>
+                    <li>💻 <strong>JavaScript:</strong> Desenvolvimento ágil e moderno para aplicações web.</li>
+                    <li>🎨 <strong>Prototipação com Figma:</strong> Transformando ideias em interfaces intuitivas.</li>
+                    <li>📱 <strong>Desenvolvimento Responsivo:</strong> Experiência perfeita em qualquer dispositivo.
+                    </li>
+                    <li>⚡ <strong>Performance e Escalabilidade:</strong> Sistemas otimizados e prontos para crescer.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <button id="toggle-theme">🌙 Modo Escuro</button>
+        <div class="projetos-container">
+            <!-- Projeto 1 -->
+            <div class="projeto">
+                <img src="assets/images/projects/banco.jpg" alt="Projeto 1">
+                <h3>Sistema Bancário</h3>
+                <p>Este é um sistema bancário simples desenvolvido em Python, que permite realizar operações como
+                    depósito, saque, criação de contas de usuário e exibição de extrato.</p>
+                <a href="https://github.com/guilhermejr92/bancoDIOnew.git" target="_blank">Ver Projeto</a>
+            </div>
+            <!-- Projeto 2 -->
+            <div class="projeto">
+                <img src="assets/images/projects/paladin.png" alt="Projeto 2">
+                <h3>Batalha de Heróis</h3>
+                <p>Batalha de Heróis é um jogo de luta em turnos onde dois heróis, Arus e Zyra, se enfrentam em batalhas
+                    emocionantes. O jogo apresenta um sistema simples e envolvente.</p>
+                <a href="https://github.com/guilhermejr92/gamebrowser.git" target="_blank">Ver Projeto</a>
+            </div>
+            <div class="carrossel">
+            </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Tem um projeto em mente ou quer apenas dizer "oi"? Preencha o formulário abaixo, e responderei o mais rápido
+            possível!</p>
+        <form>
+            <div class="input-group">
+                <label for="nome"><i class="fas fa-user"></i> Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="input-group">
+                <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <script>
+        // Seleciona o botão e o corpo do documento
+        const themeToggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        // Adiciona um evento de clique ao botão
+        themeToggleButton.addEventListener('click', () => {
+            // Alterna a classe 'dark-mode' no corpo
+            body.classList.toggle('dark-mode');
+
+            // Atualiza o texto do botão com base no tema ativo
+            if (body.classList.contains('dark-mode')) {
+                themeToggleButton.textContent = '☀️ Modo Claro';
+            } else {
+                themeToggleButton.textContent = '🌙 Modo Escuro';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
